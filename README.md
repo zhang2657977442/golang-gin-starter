@@ -8,12 +8,12 @@
 go run main.go --conf=config.toml
 ```
 
-### 接口文档
+## 接口文档
 
 swagger：
 http://localhost:9180/swagger/index.html
 
-### 文件目录说明
+## 文件目录说明
 
 - constants: 配置等常量信息，配置信息初始化
 - dao: 应用程序的数据访问层，负责与数据库或其他数据存储系统进行交互
@@ -30,17 +30,9 @@ http://localhost:9180/swagger/index.html
 - start.sh: 服务启动脚本，运行 ./start.sh，web 服务将被启动, 运行前需要先编译工程
 - stop.sh: 服务停止脚本，运行 ./stop.sh，web 服务将被停止
 
-## Start
+## 编译后启动
 
-### 直接启动
-
-```
-go run main.go --conf=config.toml
-```
-
-### 编译后启动
-
-```
+```bash
 # 编译工程
 ./build.sh
 
