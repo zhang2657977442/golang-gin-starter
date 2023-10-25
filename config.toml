@@ -1,0 +1,12 @@
+[global]
+    port = 9180
+    file_dir = "../uploads"
+[log]
+    path = "./logs"
+    level = "debug"
+    max_file_size = 100
+    max_retain_days = 7
+    max_retain_count = 10
+    module_name = "Backend"
+
+

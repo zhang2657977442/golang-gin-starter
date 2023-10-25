@@ -1,0 +1,51 @@
+basePath: /api
+definitions:
+  entity.UploadedFileRps:
+    properties:
+      fileId:
+        type: string
+      path:
+        type: string
+      size:
+        type: integer
+    type: object
+info:
+  contact: {}
+  description: NextGPT Backend Server
+  title: NextGPT接口文档
+  version: "1.0"
+paths:
+  /file/uploadFile:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 本地文件上传
+      parameters:
+      - description: File
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "0":
+          description: ""
+          schema:
+            $ref: '#/definitions/entity.UploadedFileRps'
+        "500":
+          description: Internal Server Error
+      security:
+      - ApiKeyAuth: []
+      summary: 本地文件上传
+      tags:
+      - 文件管理
+securityDefinitions:
+  ApiKeyAuth:
+    description: Description for what is this security definition being used
+    in: header
+    name: Authorization
+    type: apiKey
+  BasicAuth:
+    type: basic
+swagger: "2.0"
