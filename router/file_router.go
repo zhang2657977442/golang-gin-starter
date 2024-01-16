@@ -27,8 +27,6 @@ func exportFileHandler(router *gin.Engine, service *service.Service) {
 
 // @Description	本地文件上传
 // @Tags			文件管理
-// @Accept mpfd
-// @Produce json
 // @Summary		本地文件上传
 // @Param file formData file true "File"
 // @Success		0 {object} entity.UploadedFileRps

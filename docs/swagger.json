@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "NextGPT Backend Server",
-        "title": "NextGPT接口文档",
+        "description": "XXXXX Backend Server",
+        "title": "XXXXX 接口文档",
         "contact": {},
         "version": "1.0"
     },
@@ -16,12 +16,6 @@
                     }
                 ],
                 "description": "本地文件上传",
-                "consumes": [
-                    "multipart/form-data"
-                ],
-                "produces": [
-                    "application/json"
-                ],
                 "tags": [
                     "文件管理"
                 ],
@@ -47,6 +41,37 @@
                     }
                 }
             }
+        },
+        "/user/login": {
+            "post": {
+                "description": "用户登录",
+                "tags": [
+                    "用户账户管理"
+                ],
+                "summary": "用户登录",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/entity.UserLoginReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "0": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/entity.UserLoginRps"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -63,6 +88,29 @@
                     "type": "integer"
                 }
             }
+        },
+        "entity.UserLoginReq": {
+            "type": "object",
+            "required": [
+                "password",
+                "username"
+            ],
+            "properties": {
+                "password": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
+        "entity.UserLoginRps": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "type": "string"
+                }
+            }
         }
     },
     "securityDefinitions": {
@@ -71,9 +119,6 @@
             "type": "apiKey",
             "name": "Authorization",
             "in": "header"
-        },
-        "BasicAuth": {
-            "type": "basic"
         }
     }
 }

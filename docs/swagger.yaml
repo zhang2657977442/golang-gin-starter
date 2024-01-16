@@ -9,16 +9,29 @@ definitions:
       size:
         type: integer
     type: object
+  entity.UserLoginReq:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  entity.UserLoginRps:
+    properties:
+      token:
+        type: string
+    type: object
 info:
   contact: {}
-  description: NextGPT Backend Server
-  title: NextGPT接口文档
+  description: XXXXX Backend Server
+  title: XXXXX 接口文档
   version: "1.0"
 paths:
   /file/uploadFile:
     post:
-      consumes:
-      - multipart/form-data
       description: 本地文件上传
       parameters:
       - description: File
@@ -26,8 +39,6 @@ paths:
         name: file
         required: true
         type: file
-      produces:
-      - application/json
       responses:
         "0":
           description: ""
@@ -40,12 +51,30 @@ paths:
       summary: 本地文件上传
       tags:
       - 文件管理
+  /user/login:
+    post:
+      description: 用户登录
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/entity.UserLoginReq'
+      responses:
+        "0":
+          description: ""
+          schema:
+            $ref: '#/definitions/entity.UserLoginRps'
+        "500":
+          description: Internal Server Error
+      summary: 用户登录
+      tags:
+      - 用户账户管理
 securityDefinitions:
   ApiKeyAuth:
     description: Description for what is this security definition being used
     in: header
     name: Authorization
     type: apiKey
-  BasicAuth:
-    type: basic
 swagger: "2.0"

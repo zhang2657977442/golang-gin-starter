@@ -63,12 +63,10 @@ func getGinLogger() gin.HandlerFunc {
 	return gin.LoggerWithWriter(writer)
 }
 
-// @title					NextGPT接口文档
+// @title					XXXXX 接口文档
 // @version					1.0
-// @description				NextGPT Backend Server
+// @description				XXXXX Backend Server
 // @BasePath					/api
-//
-// @securityDefinitions.basic	BasicAuth
 // @securityDefinitions.apikey	ApiKeyAuth
 // @in							header
 // @name						Authorization

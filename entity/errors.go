@@ -12,6 +12,7 @@ var (
 	USERNAME_ALREADY_EXIST = &ChatRhinoError{9, "用户名已存在"}
 	EMAIL_ALREADY_EXIST    = &ChatRhinoError{10, "邮件已被中使用"}
 	RSPONSE_ERROR          = &ChatRhinoError{11, "操作失败"}
+	MISSING_TOKEN          = &ChatRhinoError{401, "缺少token信息"}
 )
 
 type ChatRhinoError struct {

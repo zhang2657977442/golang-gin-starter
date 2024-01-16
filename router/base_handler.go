@@ -11,6 +11,7 @@ import (
 	_ "github.com/AutoML_Group/omniForce-Backend/docs"
 	"github.com/AutoML_Group/omniForce-Backend/entity"
 	"github.com/AutoML_Group/omniForce-Backend/service"
+	"github.com/AutoML_Group/omniForce-Backend/utils"
 	"github.com/AutoML_Group/omniForce-Backend/utils/log"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/cast"
@@ -59,7 +60,30 @@ func (b *baseHandler) Timeout() int64 {
 }
 
 func (b *baseHandler) LoginHandler(c *gin.Context) {
-	c.Set(UserId, "zhangsan")
+
+	//Token放在Header的Authorization中
+	authHeader := c.Request.Header.Get("Authorization")
+	if authHeader == "" {
+		c.JSON(http.StatusOK, gin.H{
+			"code":    entity.MISSING_TOKEN.Code,
+			"message": "缺少token信息",
+		})
+		c.Abort()
+		return
+	}
+
+	// 我们使用之前定义好的解析JWT的函数来解析它
+	mc, err := utils.ParseToken(authHeader)
+	if err != nil {
+		c.JSON(http.StatusOK, gin.H{
+			"code":    entity.TOKEN_INVALID_ERROR.Code,
+			"message": "无效的Token",
+		})
+		c.Abort()
+		return
+	}
+	// 将当前请求的userid信息保存到请求的上下文c上
+	c.Set(UserId, mc.UserId)
 }
 
 func (b *baseHandler) PaincHandler(handlerFunc gin.HandlerFunc) gin.HandlerFunc {
@@ -133,8 +157,20 @@ func (b baseHandler) GetHandlers(businessFunc gin.HandlerFunc) []gin.HandlerFunc
 	}
 }
 
+func (b baseHandler) GetHandlersNoLogin(businessFunc gin.HandlerFunc) []gin.HandlerFunc {
+	return []gin.HandlerFunc{
+		b.TimeOutHandler,
+		b.PaincHandler(businessFunc),
+		b.TimeOutEndHandler,
+	}
+}
+
 func base60Handlers(businessFunc gin.HandlerFunc) []gin.HandlerFunc {
 	return base60.GetHandlers(businessFunc)
+}
+
+func base60HandlersNoLogin(businessFunc gin.HandlerFunc) []gin.HandlerFunc {
+	return base60.GetHandlersNoLogin(businessFunc)
 }
 
 var HttpRouters = make(map[string]func(router *gin.Engine, service *service.Service), 9)
