@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/AutoML_Group/omniForce-Backend/entity"
-	"github.com/AutoML_Group/omniForce-Backend/utils"
+	"github.com/golang-gin-starter/entity"
+	"github.com/golang-gin-starter/utils"
 )
 
 func (s *Service) UserLogin(req *entity.UserLoginReq) (*entity.UserLoginRps, error) {

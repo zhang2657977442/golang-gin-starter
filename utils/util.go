@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/AutoML_Group/omniForce-Backend/entity"
-	"github.com/AutoML_Group/omniForce-Backend/utils/log"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/go-playground/validator/v10"
+	"github.com/golang-gin-starter/entity"
+	"github.com/golang-gin-starter/utils/log"
 	"github.com/google/uuid"
 )
 

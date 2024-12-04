@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/AutoML_Group/omniForce-Backend/dao/database/client"
-	"github.com/AutoML_Group/omniForce-Backend/utils/log"
+	"github.com/golang-gin-starter/dao/database/client"
+	"github.com/golang-gin-starter/utils/log"
 )
 
 const (

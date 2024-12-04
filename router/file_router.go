@@ -3,10 +3,10 @@ package router
 import (
 	"net/http"
 
-	"github.com/AutoML_Group/omniForce-Backend/entity"
-	"github.com/AutoML_Group/omniForce-Backend/service"
-	"github.com/AutoML_Group/omniForce-Backend/utils"
 	"github.com/gin-gonic/gin"
+	"github.com/golang-gin-starter/entity"
+	"github.com/golang-gin-starter/service"
+	"github.com/golang-gin-starter/utils"
 )
 
 type fileRouter struct {

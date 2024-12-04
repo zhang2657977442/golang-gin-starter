@@ -1,12 +1,12 @@
 package service
 
 import (
-	db "github.com/AutoML_Group/omniForce-Backend/dao/database"
-	// "github.com/AutoML_Group/omniForce-Backend/dao/sid"
+	db "github.com/golang-gin-starter/dao/database"
+	// "github.com/golang-gin-starter/dao/sid"
 
-	"github.com/AutoML_Group/omniForce-Backend/constants"
-	"github.com/AutoML_Group/omniForce-Backend/utils/log"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/golang-gin-starter/constants"
+	"github.com/golang-gin-starter/utils/log"
 )
 
 var serviceInstance *Service = nil

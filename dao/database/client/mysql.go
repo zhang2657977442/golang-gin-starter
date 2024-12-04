@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/AutoML_Group/omniForce-Backend/constants"
-	"github.com/AutoML_Group/omniForce-Backend/utils/log"
+	"github.com/golang-gin-starter/constants"
+	"github.com/golang-gin-starter/utils/log"
 )
 
 func NewMysqlClient() (*sql.DB, error) {

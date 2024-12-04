@@ -18,9 +18,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/AutoML_Group/omniForce-Backend/entity"
-	"github.com/AutoML_Group/omniForce-Backend/utils/log"
 	"github.com/gin-gonic/gin"
+	"github.com/golang-gin-starter/entity"
+	"github.com/golang-gin-starter/utils/log"
 )
 
 type Response struct {

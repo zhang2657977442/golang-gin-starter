@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/AutoML_Group/omniForce-Backend/entity"
+	"github.com/golang-gin-starter/entity"
 )
 
 func (s *Service) UploadFile(userId string, req *entity.UploadedFileReq) (*entity.UploadedFileRps, error) {

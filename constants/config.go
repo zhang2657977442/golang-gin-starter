@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/AutoML_Group/omniForce-Backend/utils/log"
 	"github.com/BurntSushi/toml"
+	"github.com/golang-gin-starter/utils/log"
 )
 
 const (

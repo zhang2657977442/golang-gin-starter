@@ -1,4 +1,4 @@
-module github.com/AutoML_Group/omniForce-Backend
+module github.com/golang-gin-starter
 
 go 1.20
 

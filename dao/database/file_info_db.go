@@ -3,8 +3,8 @@ package db
 import (
 	"fmt"
 
-	"github.com/AutoML_Group/omniForce-Backend/entity"
-	"github.com/AutoML_Group/omniForce-Backend/utils/log"
+	"github.com/golang-gin-starter/entity"
+	"github.com/golang-gin-starter/utils/log"
 )
 
 func (c *DbClient) UploadFile(userId string, req *entity.UploadedFileReq) (*entity.UploadedFileRps, error) {
