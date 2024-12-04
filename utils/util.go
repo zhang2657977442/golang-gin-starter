@@ -9,9 +9,9 @@ import (
 
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/go-playground/validator/v10"
-	"github.com/golang-gin-starter/entity"
-	"github.com/golang-gin-starter/utils/log"
 	"github.com/google/uuid"
+	"github.com/zhang2657977442/golang-gin-starter/entity"
+	"github.com/zhang2657977442/golang-gin-starter/utils/log"
 )
 
 var MySecret = []byte("ADMINCHATRHINO") // TODO 需要替换 jwt 加密的key

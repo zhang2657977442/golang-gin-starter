@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/BurntSushi/toml"
-	"github.com/golang-gin-starter/utils/log"
+	"github.com/zhang2657977442/golang-gin-starter/utils/log"
 )
 
 const (

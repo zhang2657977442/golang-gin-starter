@@ -19,8 +19,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/golang-gin-starter/entity"
-	"github.com/golang-gin-starter/utils/log"
+	"github.com/zhang2657977442/golang-gin-starter/entity"
+	"github.com/zhang2657977442/golang-gin-starter/utils/log"
 )
 
 type Response struct {

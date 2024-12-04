@@ -11,10 +11,10 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/golang-gin-starter/constants"
-	"github.com/golang-gin-starter/router"
-	"github.com/golang-gin-starter/service"
-	"github.com/golang-gin-starter/utils/log"
+	"github.com/zhang2657977442/golang-gin-starter/constants"
+	"github.com/zhang2657977442/golang-gin-starter/router"
+	"github.com/zhang2657977442/golang-gin-starter/service"
+	"github.com/zhang2657977442/golang-gin-starter/utils/log"
 	"gopkg.in/natefinch/lumberjack.v2"
 )
 

@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/golang-gin-starter/entity"
-	"github.com/golang-gin-starter/service"
-	"github.com/golang-gin-starter/utils"
+	"github.com/zhang2657977442/golang-gin-starter/entity"
+	"github.com/zhang2657977442/golang-gin-starter/service"
+	"github.com/zhang2657977442/golang-gin-starter/utils"
 )
 
 type fileRouter struct {

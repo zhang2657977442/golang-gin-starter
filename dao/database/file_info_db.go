@@ -3,8 +3,8 @@ package db
 import (
 	"fmt"
 
-	"github.com/golang-gin-starter/entity"
-	"github.com/golang-gin-starter/utils/log"
+	"github.com/zhang2657977442/golang-gin-starter/entity"
+	"github.com/zhang2657977442/golang-gin-starter/utils/log"
 )
 
 func (c *DbClient) UploadFile(userId string, req *entity.UploadedFileReq) (*entity.UploadedFileRps, error) {

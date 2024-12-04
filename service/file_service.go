@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/golang-gin-starter/entity"
+	"github.com/zhang2657977442/golang-gin-starter/entity"
 )
 
 func (s *Service) UploadFile(userId string, req *entity.UploadedFileReq) (*entity.UploadedFileRps, error) {

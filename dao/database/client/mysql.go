@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/golang-gin-starter/constants"
-	"github.com/golang-gin-starter/utils/log"
+	"github.com/zhang2657977442/golang-gin-starter/constants"
+	"github.com/zhang2657977442/golang-gin-starter/utils/log"
 )
 
 func NewMysqlClient() (*sql.DB, error) {

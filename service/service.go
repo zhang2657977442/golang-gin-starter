@@ -1,12 +1,12 @@
 package service
 
 import (
-	db "github.com/golang-gin-starter/dao/database"
-	// "github.com/golang-gin-starter/dao/sid"
+	db "github.com/zhang2657977442/golang-gin-starter/dao/database"
+	// "github.com/zhang2657977442/golang-gin-starter/dao/sid"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/golang-gin-starter/constants"
-	"github.com/golang-gin-starter/utils/log"
+	"github.com/zhang2657977442/golang-gin-starter/constants"
+	"github.com/zhang2657977442/golang-gin-starter/utils/log"
 )
 
 var serviceInstance *Service = nil

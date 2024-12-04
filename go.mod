@@ -1,4 +1,4 @@
-module github.com/golang-gin-starter
+module github.com/zhang2657977442/golang-gin-starter
 
 go 1.20
 
